@@ -6,6 +6,10 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.github.ruinszero'
+
 android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
@@ -15,7 +19,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -81,4 +85,33 @@ dependencies {
     implementation rxbinding_appcompat_v7
     //状态栏
     implementation statusbarutil
+}
+
+// 指定编码
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+// 打包源码jar
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    failOnError  false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.compile
+}
+
+// 制作文档(Javadoc)
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
 }
