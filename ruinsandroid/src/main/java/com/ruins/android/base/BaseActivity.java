@@ -2,10 +2,7 @@ package com.ruins.android.base;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
 import com.ruins.android.delegate.IActivity;
-import com.ruins.android.ui.widget.SweetAlert.SweetAlertDialog;
-
 import butterknife.ButterKnife;
 
 /**
@@ -14,7 +11,6 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseActivity extends AppCompatActivity implements IActivity{
 
-    protected SweetAlertDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +19,6 @@ public abstract class BaseActivity extends AppCompatActivity implements IActivit
             setContentView(layoutResource());
             ButterKnife.bind(this);
         }
-        progressDialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
         init();
     }
 

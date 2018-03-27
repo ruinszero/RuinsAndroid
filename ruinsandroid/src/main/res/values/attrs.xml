@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="LoadingStatusView">
-        <attr name="minWidth" format="dimension" />
-        <attr name="maxWidth" format="dimension"/>
-        <attr name="minHeight" format="dimension" />
-        <attr name="maxHeight" format="dimension"/>
-        <attr name="indicatorName" format="string"/>
-        <attr name="indicatorColor" format="color"/>
-    </declare-styleable>
     <declare-styleable name="FABProgressCircle">
         <attr name="arcColor"
             format="color"/>
@@ -29,21 +21,6 @@
             format="boolean"/>
     </declare-styleable>
 
-    <declare-styleable name="Rotate3dAnimation">
-        <attr name="rollType" format="enum">
-            <enum name="x" value="0"/>
-            <enum name="y" value="1"/>
-            <enum name="z" value="2"/>
-        </attr>
-        <attr name="fromDeg" format="float" />
-        <attr name="toDeg" format="float" />
-        <attr name="pivotX" format="fraction"/>
-        <attr name="pivotY" format="fraction" />
-    </declare-styleable>
-
-    <attr name="sweet_alert_bg_drawable" format="reference" />
-    <attr name="sweet_alert_title_text_color" format="color|reference" />
-    <attr name="sweet_alert_content_text_color" format="color|reference" />
 
     <declare-styleable name="CheckBox_Sample">
         <attr name="size" format="dimension" />
