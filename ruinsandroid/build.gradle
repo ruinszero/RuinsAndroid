@@ -16,13 +16,10 @@ android {
 
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 27
-        versionCode 4
-        versionName "1.0.3"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        versionCode 5
+        versionName "1.0.4"
     }
     buildTypes {
         release {
@@ -42,49 +39,27 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    testImplementation 'junit:junit:4.12'
     //依赖注入
     implementation butterknife
     kapt butterknife_compiler
-//    implementation dagger2
-//    kapt dagger2_compiler
-//    implementation dagger2_android
-//    implementation dagger2_android_support
-//    kapt dagger2_android_compiler
-//    //权限相关
-//    implementation rxpermissions
-//    //rxjava
+    implementation room
+    //rxjava
     implementation rxjava2
     implementation rxjava2_android
-//    //json解析库
-//    implementation gson
+
 //    //支持库
     implementation design
     implementation support
     implementation support_v7
     implementation cardview
     implementation recyclerview
-//    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-//    //圆角头像
-//    implementation circle
-//    //网络库
+
+    //网络库
     implementation retrofit2
     implementation retrofit2_rxjava2
     implementation retrofit2_gson
     implementation okhttp_log
-//    //RecyclerView BaseViewHolder
-//    implementation baseAdapter
-//    //lifecycles
-//    implementation lifecycles_extensions
-//    implementation lifecycles_reactivestreams
-//    //logger
-//    implementation log
-//    //rxbinding
-//    implementation rxbinding
-//    implementation rxbinding_support_v4
-//    implementation rxbinding_appcompat_v7
-//    //状态栏
-//    implementation statusbarutil
+
 }
 
 // 指定编码
@@ -99,7 +74,7 @@ task sourcesJar(type: Jar) {
 }
 
 task javadoc(type: Javadoc) {
-    failOnError  false
+    failOnError false
     source = android.sourceSets.main.java.sourceFiles
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
     classpath += configurations.compile

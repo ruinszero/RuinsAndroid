@@ -1,5 +1,7 @@
 package com.ruins.android.base;
 
+import android.arch.persistence.room.Ignore;
+
 import java.lang.reflect.Field;
 import java.util.Collections;
 import java.util.HashMap;
@@ -11,6 +13,7 @@ import java.util.Map;
  */
 
 public class BaseBean {
+    @Ignore
     private Map<String, Object> params;
 
     /**
