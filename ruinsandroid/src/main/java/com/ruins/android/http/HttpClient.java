@@ -1,8 +1,6 @@
 package com.ruins.android.http;
 
 
-import com.ruins.android.BuildConfig;
-
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
@@ -22,21 +20,26 @@ public class HttpClient {
     /**
      * 获取HttpClient
      * @param baseUrl  URL
+     * @param log 是否打印日志
+     * @param builder 允许自定义 OkHttpClient.Builder 满足特殊需求
      */
-    public static HttpClient getInstance(String baseUrl){
+    public static HttpClient getInstance(String baseUrl,boolean log,OkHttpClient.Builder builder){
         if (httpClient==null){
             synchronized (HttpClient.class){
                 if (httpClient==null){
-                    httpClient=new HttpClient(baseUrl);
+                    httpClient=new HttpClient(baseUrl,log,builder);
                 }
             }
         }
         return httpClient;
     }
 
-    private HttpClient(String baseUrl){
-        OkHttpClient.Builder builder=new OkHttpClient.Builder();
-        if (BuildConfig.DEBUG){
+    private HttpClient(String baseUrl,boolean log,OkHttpClient.Builder builder){
+        if (builder == null) {
+            builder=new OkHttpClient.Builder();
+        }
+
+        if (log){
             //Log信息拦截器
             HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
