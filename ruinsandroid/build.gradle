@@ -8,16 +8,17 @@ apply plugin: 'kotlin-kapt'
 
 apply plugin: 'com.github.dcendents.android-maven'
 
+apply plugin: 'com.jakewharton.butterknife'
+
 group = 'com.github.ruinszero'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
-
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 5
         versionName "1.1.1"
     }
@@ -35,31 +36,28 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     //依赖注入
     implementation butterknife
     kapt butterknife_compiler
     implementation room
+    kapt room_processor
+    implementation room_rxjava
     //rxjava
     implementation rxjava2
     implementation rxjava2_android
-
-//    //支持库
-    implementation design
-    implementation support
-    implementation support_v7
-    implementation cardview
-    implementation recyclerview
-
+    implementation rxkotlin
+    //支持库
+    implementation material
+    implementation androidx_support_v4
+    implementation androidx_appcompat
+    implementation androidx_cardview
+    implementation androidx_recyclerview
     //网络库
     implementation retrofit2
     implementation retrofit2_rxjava2
     implementation retrofit2_gson
     implementation okhttp_log
-
 }
 
 // 指定编码
@@ -82,7 +80,7 @@ task javadoc(type: Javadoc) {
 
 // 制作文档(Javadoc)
 task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
+    archiveClassifier = 'javadoc'
     from javadoc.destinationDir
 }
 
