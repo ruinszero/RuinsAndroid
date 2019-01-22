@@ -1,8 +1,10 @@
 package com.ruins.android.db;
 
-import android.arch.persistence.room.TypeConverter;
+
 
 import java.util.Date;
+
+import androidx.room.TypeConverter;
 
 /**
  * Created by Ruins on 2017/8/23.

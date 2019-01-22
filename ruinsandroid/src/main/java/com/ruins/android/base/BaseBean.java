@@ -1,11 +1,12 @@
 package com.ruins.android.base;
 
-import android.arch.persistence.room.Ignore;
 
 import java.lang.reflect.Field;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.room.Ignore;
 
 /**
  * Created by ruinszero on 2017/3/31.

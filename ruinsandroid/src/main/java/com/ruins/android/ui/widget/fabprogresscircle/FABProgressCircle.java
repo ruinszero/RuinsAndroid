@@ -20,7 +20,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.FrameLayout;
@@ -32,6 +31,8 @@ import com.ruins.android.ui.widget.fabprogresscircle.listeners.FABProgressListen
 import com.ruins.android.ui.widget.fabprogresscircle.progressarc.ArcListener;
 import com.ruins.android.ui.widget.fabprogresscircle.progressarc.ProgressArcView;
 import com.ruins.android.ui.widget.fabprogresscircle.utils.LibraryUtils;
+
+import androidx.core.view.ViewCompat;
 
 
 /**

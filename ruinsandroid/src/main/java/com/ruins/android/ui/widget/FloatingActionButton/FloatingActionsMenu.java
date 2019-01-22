@@ -12,8 +12,6 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.ColorRes;
-import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.ContextThemeWrapper;
 import android.view.TouchDelegate;
@@ -25,6 +23,9 @@ import android.view.animation.OvershootInterpolator;
 import android.widget.TextView;
 
 import com.ruins.android.R;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.NonNull;
 
 public class FloatingActionsMenu extends ViewGroup {
   public static final int EXPAND_UP = 0;

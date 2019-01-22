@@ -2,7 +2,6 @@ package com.ruins.android.ui.widget.FloatingActionButton;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.support.design.widget.FloatingActionButton;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;

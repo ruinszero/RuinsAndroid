@@ -1,8 +1,10 @@
 package com.ruins.android.base;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
 import com.ruins.android.delegate.IActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.ButterKnife;
 
 /**
