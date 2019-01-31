@@ -1,6 +1,6 @@
 package com.ruins.android.utils.ui;
 
-import android.support.design.widget.NavigationView;
+import com.google.android.material.navigation.NavigationView;
 
 /**
  * Created by Ruins on 2017/8/7.

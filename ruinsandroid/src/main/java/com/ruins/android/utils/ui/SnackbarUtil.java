@@ -5,13 +5,13 @@ package com.ruins.android.utils.ui;
  */
 
 import android.graphics.Color;
-import android.support.design.widget.Snackbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.ruins.android.R;
 
 public class SnackbarUtil {
