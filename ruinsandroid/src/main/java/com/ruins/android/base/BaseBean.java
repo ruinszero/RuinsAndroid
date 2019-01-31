@@ -1,11 +1,9 @@
 package com.ruins.android.base;
 
-
 import java.lang.reflect.Field;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-
 import androidx.room.Ignore;
 
 /**
@@ -24,7 +22,7 @@ public class BaseBean {
         Class<?> clazz = this.getClass();
         //获取类的属性
         Field[] fields = clazz.getDeclaredFields();
-        if (fields == null || fields.length == 0) {
+        if (fields.length == 0) {
             return Collections.emptyMap();
         }
         params = new HashMap<>();

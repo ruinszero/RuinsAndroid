@@ -1,9 +1,7 @@
 package com.ruins.android.base;
 
 import android.os.Bundle;
-
 import com.ruins.android.delegate.IActivity;
-
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.ButterKnife;
 
@@ -12,7 +10,6 @@ import butterknife.ButterKnife;
  * @author ruins
  */
 public abstract class BaseActivity extends AppCompatActivity implements IActivity{
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +26,6 @@ public abstract class BaseActivity extends AppCompatActivity implements IActivit
      */
     protected abstract void init();
 
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -39,7 +35,6 @@ public abstract class BaseActivity extends AppCompatActivity implements IActivit
     protected void onPause() {
         super.onPause();
     }
-
 
     @Override
     protected void onDestroy() {
