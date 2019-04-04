@@ -58,6 +58,7 @@ dependencies {
     implementation retrofit2_rxjava2
     implementation retrofit2_gson
     implementation okhttp_log
+    implementation gson
 }
 
 // 指定编码

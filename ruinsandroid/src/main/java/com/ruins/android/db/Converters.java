@@ -1,7 +1,5 @@
 package com.ruins.android.db;
 
-
-
 import java.util.Date;
 
 import androidx.room.TypeConverter;
@@ -10,7 +8,6 @@ import androidx.room.TypeConverter;
  * Created by Ruins on 2017/8/23.
  * @author Ruins
  */
-
 public class Converters {
     @TypeConverter
     public static Date fromTimestamp(Long value) {

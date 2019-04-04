@@ -35,6 +35,7 @@ dependencies {
     implementation androidx_appcompat
     implementation androidx_cardview
     implementation androidx_recyclerview
+    implementation gson
     testImplementation 'junit:junit:4.12'
     implementation project(':ruinsandroid')
 }
