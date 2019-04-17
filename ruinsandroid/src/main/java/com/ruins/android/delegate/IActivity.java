@@ -10,5 +10,5 @@ public interface IActivity {
      * 加载布局文件
      * @return 布局文件对应的Id
      */
-    int layoutResource();
+    int getLayoutResource();
 }

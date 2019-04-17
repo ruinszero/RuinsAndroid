@@ -1,7 +1,9 @@
 package com.ruins.android.base;
 
 import android.os.Bundle;
+
 import com.ruins.android.delegate.IActivity;
+
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.ButterKnife;
 
@@ -14,8 +16,8 @@ public abstract class BaseActivity extends AppCompatActivity implements IActivit
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (layoutResource() != 0) {
-            setContentView(layoutResource());
+        if (getLayoutResource() != 0) {
+            setContentView(getLayoutResource());
             ButterKnife.bind(this);
         }
         init();
