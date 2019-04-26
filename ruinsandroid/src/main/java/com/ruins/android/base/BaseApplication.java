@@ -39,7 +39,7 @@ public class BaseApplication extends Application {
     class NetworkReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
-            isConnection = NetworkUtil.isNetworkStatus(context);
+            isConnection = NetworkUtil.isAvailable(context);
         }
     }
 
