@@ -13,12 +13,12 @@ apply plugin: 'com.jakewharton.butterknife'
 group = 'com.github.ruinszero'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdkVersion 21
+        targetSdkVersion 29
         versionCode 6
         versionName "1.2.0"
     }
@@ -54,9 +54,9 @@ dependencies {
     implementation androidx_cardview
     implementation androidx_recyclerview
     //网络库
-    implementation retrofit2
-    implementation retrofit2_rxjava2
-    implementation retrofit2_gson
+    implementation retrofit
+    implementation retrofit_rxjava2
+    implementation retrofit_gson
     implementation okhttp_log
     implementation gson
 }
